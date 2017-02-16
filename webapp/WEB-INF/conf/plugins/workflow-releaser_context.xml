@@ -18,6 +18,46 @@
 		
 	<bean id="workflow-releaser.taskGitCloneRepository"
 		class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskGitCloneRepository" />
+    <!-- Task Git Merge-->
+    <bean id="workflow-releaser.taskTypeGitMerge"
+        class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
+        p:key="taskGitMerge" p:titleI18nKey="module.workflow.releaser.taskGitMergeTitle"
+        p:beanName="workflow-releaser.taskGitMerge"
+        p:taskForAutomaticAction="true" />
+        
+    <bean id="workflow-releaser.taskGitMerge"
+        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskGitMerge" />
+        
+     <!-- Task Git Release perform-->
+    <bean id="workflow-releaser.taskTypeGitReleasePerform"
+        class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
+        p:key="taskGitReleasePerform" p:titleI18nKey="module.workflow.releaser.taskGitReleasePerformTitle"
+        p:beanName="workflow-releaser.taskGitReleasePerform"
+        p:taskForAutomaticAction="true" />
+        
+    <bean id="workflow-releaser.taskGitReleasePerform"
+        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskGitReleasePerform" />
+        
+     <!-- Task Git Release prepare-->
+    <bean id="workflow-releaser.taskTypeGitReleasePrepare"
+        class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
+        p:key="taskGitReleasePrepare" p:titleI18nKey="module.workflow.releaser.taskGitReleasePrepareTitle"
+        p:beanName="workflow-releaser.taskGitReleasePrepare"
+        p:taskForAutomaticAction="true" />
+        
+    <bean id="workflow-releaser.taskGitReleasePrepare"
+        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskGitReleasePrepare" />
+            
+	  <!-- Task Tweet-->
+    <bean id="workflow-releaser.taskTypeTweet"
+        class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
+        p:key="taskTweet" p:titleI18nKey="module.workflow.releaser.taskTweetTitle"
+        p:beanName="workflow-releaser.taskTweet"
+        p:taskForAutomaticAction="true" />
+        
+    <bean id="workflow-releaser.taskTweet"
+        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskTweet" />
+            	
 
 
 
