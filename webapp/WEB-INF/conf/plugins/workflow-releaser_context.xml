@@ -57,6 +57,35 @@
         
     <bean id="workflow-releaser.taskTweet"
         class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskTweet" />
+        
+    <!-- Task TagSite-->
+    <bean id="workflow-releaser.taskTypeTagSite"
+        class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
+        p:key="taskTagSite" p:titleI18nKey="module.workflow.releaser.taskTagSiteTitle"
+        p:beanName="workflow-releaser.taskTagSite"
+        p:taskForAutomaticAction="true" />
+        
+    <bean id="workflow-releaser.taskTagSite"
+        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskTagSite" />
+         <!-- Task checkoutSite-->
+    <bean id="workflow-releaser.taskTypeCheckoutSite"
+        class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
+        p:key="taskCheckoutSite" p:titleI18nKey="module.workflow.releaser.taskCheckoutSiteTitle"
+        p:beanName="workflow-releaser.taskCheckoutSite"
+        p:taskForAutomaticAction="true" />
+        
+    <bean id="workflow-releaser.taskCheckoutSite"
+        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskCheckoutSite" />
+             <!-- Task checkoutComponent-->
+    <bean id="workflow-releaser.taskTypeCheckoutComponent"
+        class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
+        p:key="taskCheckoutComponent" p:titleI18nKey="module.workflow.releaser.taskCheckoutComponentTitle"
+        p:beanName="workflow-releaser.taskCheckoutComponent"
+        p:taskForAutomaticAction="true" />
+        
+    <bean id="workflow-releaser.taskCheckoutComponent"
+        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskCheckoutComponent" />
+                
             	
 
 
