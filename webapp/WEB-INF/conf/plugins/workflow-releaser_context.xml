@@ -76,7 +76,8 @@
         
     <bean id="workflow-releaser.taskCheckoutSite"
         class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskCheckoutSite" />
-             <!-- Task checkoutComponent-->
+    
+     <!-- Task checkoutComponent-->
     <bean id="workflow-releaser.taskTypeCheckoutComponent"
         class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
         p:key="taskCheckoutComponent" p:titleI18nKey="module.workflow.releaser.taskCheckoutComponentTitle"
@@ -88,6 +89,25 @@
                 
             	
 
-
+     <!-- Task SVN Release perform-->
+    <bean id="workflow-releaser.taskTypeSvnReleasePerform"
+        class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
+        p:key="taskSvnReleasePerform" p:titleI18nKey="module.workflow.releaser.taskSvnReleasePerformTitle"
+        p:beanName="workflow-releaser.taskSvnReleasePerform"
+        p:taskForAutomaticAction="true" />
+        
+    <bean id="workflow-releaser.taskSvnReleasePerform"
+        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskSvnReleasePerform" />
+        
+     <!-- Task Svn Release prepare-->
+    <bean id="workflow-releaser.taskTypeSvnReleasePrepare"
+        class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
+        p:key="taskSvnReleasePrepare" p:titleI18nKey="module.workflow.releaser.taskSvnReleasePrepareTitle"
+        p:beanName="workflow-releaser.taskSvnReleasePrepare"
+        p:taskForAutomaticAction="true" />
+        
+    <bean id="workflow-releaser.taskSvnReleasePrepare"
+        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskSvnReleasePrepare" />
+            
 
 </beans>

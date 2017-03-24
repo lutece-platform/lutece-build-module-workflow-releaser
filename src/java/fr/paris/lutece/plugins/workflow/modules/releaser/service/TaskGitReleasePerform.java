@@ -34,7 +34,7 @@ public class TaskGitReleasePerform extends  SimpleTask {
     {
         ResourceHistory resourceHistory = _resourceHistoryService.findByPrimaryKey( nIdResourceHistory );
         WorkflowReleaseContext workflowReleaseContext=_workflowReleaseContextService.getWorkflowReleaseContext(resourceHistory.getIdResource());
-        _workflowReleaseContextService.realeasePerformGit( workflowReleaseContext, locale );
+        _workflowReleaseContextService.releasePerformGit( workflowReleaseContext, locale );
     }
 
     /**
