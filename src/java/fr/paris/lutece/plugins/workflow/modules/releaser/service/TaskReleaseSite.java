@@ -19,7 +19,7 @@ import fr.paris.lutece.plugins.workflowcore.service.task.SimpleTask;
  * TaskGitCloneRepository
  *
  */
-public class TaskTagSite extends  SimpleTask {
+public class TaskReleaseSite extends  SimpleTask {
 
 	@Inject
     private IResourceHistoryService _resourceHistoryService;
@@ -34,7 +34,7 @@ public class TaskTagSite extends  SimpleTask {
     {
         ResourceHistory resourceHistory = _resourceHistoryService.findByPrimaryKey( nIdResourceHistory );
         WorkflowReleaseContext workflowReleaseContext=_workflowReleaseContextService.getWorkflowReleaseContext(resourceHistory.getIdResource());
-        _workflowReleaseContextService.tagSite( workflowReleaseContext, locale );
+        _workflowReleaseContextService.releaseSite( workflowReleaseContext, locale );
     }
 
     /**

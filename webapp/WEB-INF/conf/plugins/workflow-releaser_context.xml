@@ -58,15 +58,15 @@
     <bean id="workflow-releaser.taskTweet"
         class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskTweet" />
         
-    <!-- Task TagSite-->
-    <bean id="workflow-releaser.taskTypeTagSite"
+    <!-- Task ReleaseSite-->
+    <bean id="workflow-releaser.taskTypeReleaseSite"
         class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
-        p:key="taskTagSite" p:titleI18nKey="module.workflow.releaser.taskTagSiteTitle"
-        p:beanName="workflow-releaser.taskTagSite"
+        p:key="taskReleaseSite" p:titleI18nKey="module.workflow.releaser.taskReleaseSiteTitle"
+        p:beanName="workflow-releaser.taskReleaseSite"
         p:taskForAutomaticAction="true" />
         
-    <bean id="workflow-releaser.taskTagSite"
-        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskTagSite" />
+    <bean id="workflow-releaser.taskReleaseSite"
+        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskReleaseSite" />
          <!-- Task checkoutSite-->
     <bean id="workflow-releaser.taskTypeCheckoutSite"
         class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
@@ -108,6 +108,4 @@
         
     <bean id="workflow-releaser.taskSvnReleasePrepare"
         class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskSvnReleasePrepare" />
-            
-
 </beans>
