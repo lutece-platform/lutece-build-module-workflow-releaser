@@ -108,4 +108,14 @@
         
     <bean id="workflow-releaser.taskSvnReleasePrepare"
         class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskSvnReleasePrepare" />
+        
+      <!-- Task Update Jira versions-->
+    <bean id="workflow-releaser.taskTypeUpdateJiraVersions"
+        class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
+        p:key="taskUpdateJiraVersions" p:titleI18nKey="module.workflow.releaser.taskUpdateJiraVersionsTitle"
+        p:beanName="workflow-releaser.taskUpdateJiraVersions"
+        p:taskForAutomaticAction="true" />
+        
+    <bean id="workflow-releaser.taskUpdateJiraVersions"
+        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskUpdateJiraVersions" />    
 </beans>
