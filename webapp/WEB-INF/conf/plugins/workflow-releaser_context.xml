@@ -9,44 +9,66 @@
        http://www.springframework.org/schema/context/spring-context-3.0.xsd
        http://www.springframework.org/schema/tx
        http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
-	<!-- Task Clone repository -->
-    <bean id="workflow-releaser.taskTypeGitCloneRepository"
+	<!-- Task Checkout Repository(checkout svn/clone git) -->
+    <bean id="workflow-releaser.taskTypeCheckoutRepository"
 		class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
-		p:key="taskGitCloneRepositoy" p:titleI18nKey="module.workflow.releaser.taskGitCloneRepositoyTitle"
-		p:beanName="workflow-releaser.taskGitCloneRepository"
+		p:key="taskCheckoutRepositoy" p:titleI18nKey="module.workflow.releaser.taskCheckoutRepositoyTitle"
+		p:beanName="workflow-releaser.taskCheckoutRepositoy"
 		p:taskForAutomaticAction="true" />
 		
-	<bean id="workflow-releaser.taskGitCloneRepository"
-		class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskGitCloneRepository" />
-    <!-- Task Git Merge-->
-    <bean id="workflow-releaser.taskTypeGitMerge"
+	<bean id="workflow-releaser.taskCheckoutRepositoy"
+		class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskCheckoutRepository" />
+    <!-- Task Merge Develop Master-->
+    <bean id="workflow-releaser.taskTypeMergeDevelopMaster"
         class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
-        p:key="taskGitMerge" p:titleI18nKey="module.workflow.releaser.taskGitMergeTitle"
-        p:beanName="workflow-releaser.taskGitMerge"
+        p:key="taskMergeDevelopMaster" p:titleI18nKey="module.workflow.releaser.taskMergeDevelopMasterTitle"
+        p:beanName="workflow-releaser.taskMergeDevelopMaster"
         p:taskForAutomaticAction="true" />
         
-    <bean id="workflow-releaser.taskGitMerge"
-        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskGitMerge" />
+    <bean id="workflow-releaser.taskMergeDevelopMaster"
+        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskMergeDevelopMaster" />
         
-     <!-- Task Git Release perform-->
-    <bean id="workflow-releaser.taskTypeGitReleasePerform"
+   
+     <!-- Task Release perform component-->
+    <bean id="workflow-releaser.taskTypeReleasePerformComponent"
         class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
-        p:key="taskGitReleasePerform" p:titleI18nKey="module.workflow.releaser.taskGitReleasePerformTitle"
-        p:beanName="workflow-releaser.taskGitReleasePerform"
+        p:key="taskeReleasePerformComponent" p:titleI18nKey="module.workflow.releaser.taskReleasePerformComponentTitle"
+        p:beanName="workflow-releaser.taskeReleasePerformComponent"
         p:taskForAutomaticAction="true" />
         
-    <bean id="workflow-releaser.taskGitReleasePerform"
-        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskGitReleasePerform" />
+    <bean id="workflow-releaser.taskeReleasePerformComponent"
+        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskReleasePerformComponent" />
         
-     <!-- Task Git Release prepare-->
-    <bean id="workflow-releaser.taskTypeGitReleasePrepare"
+     <!-- Task Release perform site-->
+    <bean id="workflow-releaser.taskTypeReleasePerformSite"
         class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
-        p:key="taskGitReleasePrepare" p:titleI18nKey="module.workflow.releaser.taskGitReleasePrepareTitle"
-        p:beanName="workflow-releaser.taskGitReleasePrepare"
+        p:key="taskeReleasePerformSite" p:titleI18nKey="module.workflow.releaser.taskReleasePerformSiteTitle"
+        p:beanName="workflow-releaser.taskeReleasePerformSite"
         p:taskForAutomaticAction="true" />
         
-    <bean id="workflow-releaser.taskGitReleasePrepare"
-        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskGitReleasePrepare" />
+    <bean id="workflow-releaser.taskeReleasePerformSite"
+        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskReleasePerformSite" />
+        
+     <!-- Task Release prepare component-->
+    <bean id="workflow-releaser.taskTypeReleasePrepareComponent"
+        class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
+        p:key="taskeReleasePrepareComponent" p:titleI18nKey="module.workflow.releaser.taskReleasePrepareComponentTitle"
+        p:beanName="workflow-releaser.taskeReleasePrepareComponent"
+        p:taskForAutomaticAction="true" />
+        
+    <bean id="workflow-releaser.taskeReleasePrepareComponent"
+        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskReleasePrepareComponent" />
+        
+     <!-- Task Release perform site-->
+    <bean id="workflow-releaser.taskTypeReleasePrepareSite"
+        class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
+        p:key="taskeReleasePrepareSite" p:titleI18nKey="module.workflow.releaser.taskReleasePrepareSiteTitle"
+        p:beanName="workflow-releaser.taskeReleasePrepareSite"
+        p:taskForAutomaticAction="true" />
+        
+    <bean id="workflow-releaser.taskeReleasePrepareSite"
+        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskReleasePrepareSite" />
+     
             
 	  <!-- Task Tweet-->
     <bean id="workflow-releaser.taskTypeTweet"
@@ -58,58 +80,7 @@
     <bean id="workflow-releaser.taskTweet"
         class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskTweet" />
         
-    <!-- Task ReleaseSite-->
-    <bean id="workflow-releaser.taskTypeReleaseSite"
-        class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
-        p:key="taskReleaseSite" p:titleI18nKey="module.workflow.releaser.taskReleaseSiteTitle"
-        p:beanName="workflow-releaser.taskReleaseSite"
-        p:taskForAutomaticAction="true" />
-        
-    <bean id="workflow-releaser.taskReleaseSite"
-        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskReleaseSite" />
-         <!-- Task checkoutSite-->
-    <bean id="workflow-releaser.taskTypeCheckoutSite"
-        class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
-        p:key="taskCheckoutSite" p:titleI18nKey="module.workflow.releaser.taskCheckoutSiteTitle"
-        p:beanName="workflow-releaser.taskCheckoutSite"
-        p:taskForAutomaticAction="true" />
-        
-    <bean id="workflow-releaser.taskCheckoutSite"
-        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskCheckoutSite" />
-    
-     <!-- Task checkoutComponent-->
-    <bean id="workflow-releaser.taskTypeCheckoutComponent"
-        class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
-        p:key="taskCheckoutComponent" p:titleI18nKey="module.workflow.releaser.taskCheckoutComponentTitle"
-        p:beanName="workflow-releaser.taskCheckoutComponent"
-        p:taskForAutomaticAction="true" />
-        
-    <bean id="workflow-releaser.taskCheckoutComponent"
-        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskCheckoutComponent" />
-                
-            	
-
-     <!-- Task SVN Release perform-->
-    <bean id="workflow-releaser.taskTypeSvnReleasePerform"
-        class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
-        p:key="taskSvnReleasePerform" p:titleI18nKey="module.workflow.releaser.taskSvnReleasePerformTitle"
-        p:beanName="workflow-releaser.taskSvnReleasePerform"
-        p:taskForAutomaticAction="true" />
-        
-    <bean id="workflow-releaser.taskSvnReleasePerform"
-        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskSvnReleasePerform" />
-        
-     <!-- Task Svn Release prepare-->
-    <bean id="workflow-releaser.taskTypeSvnReleasePrepare"
-        class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
-        p:key="taskSvnReleasePrepare" p:titleI18nKey="module.workflow.releaser.taskSvnReleasePrepareTitle"
-        p:beanName="workflow-releaser.taskSvnReleasePrepare"
-        p:taskForAutomaticAction="true" />
-        
-    <bean id="workflow-releaser.taskSvnReleasePrepare"
-        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskSvnReleasePrepare" />
-        
-      <!-- Task Update Jira versions-->
+         <!-- Task Update Jira versions-->
     <bean id="workflow-releaser.taskTypeUpdateJiraVersions"
         class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
         p:key="taskUpdateJiraVersions" p:titleI18nKey="module.workflow.releaser.taskUpdateJiraVersionsTitle"
