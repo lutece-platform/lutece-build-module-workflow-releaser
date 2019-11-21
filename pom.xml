@@ -10,7 +10,7 @@
     <groupId>fr.paris.lutece.plugins</groupId>
     <artifactId>module-workflow-releaser</artifactId>
     <packaging>lutece-plugin</packaging>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.1.0</version>
     <name>Lutece workflow releaser plugin</name>
 
     <repositories>
@@ -60,12 +60,13 @@
     <properties>
         <componentName>wreleaser</componentName>
         <jiraProjectName>RELEASERWF</jiraProjectName>
-        <jiraComponentId></jiraComponentId>
+        <jiraComponentId />
     </properties>
  
     <scm>
         <connection>scm:git:https://github.com/lutece-platform/lutece-build-module-workflow-releaser.git</connection>
         <developerConnection>scm:git:https://github.com/lutece-platform/lutece-build-module-workflow-releaser.git</developerConnection>
         <url>https://github.com/lutece-platform/lutece-build-module-workflow-releaser.git</url>
-    </scm>
+      <tag>module-workflow-releaser-1.1.0</tag>
+  </scm>
 </project>
