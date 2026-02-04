@@ -69,6 +69,15 @@
     <bean id="workflow-releaser.taskeReleasePrepareSite"
         class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskReleasePrepareSite" />
      
+     <!-- Task Create docker image-->
+    <bean id="workflow-releaser.taskTypeCreateDockerImage"
+        class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
+        p:key="taskCreateDockerImage" p:titleI18nKey="module.workflow.releaser.taskCreateDockerImageTitle"
+        p:beanName="workflow-releaser.taskCreateDockerImage"
+        p:taskForAutomaticAction="true" />
+        
+    <bean id="workflow-releaser.taskCreateDockerImage"
+        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskCreateDockerImage" />
             
 	  <!-- Task Tweet-->
     <bean id="workflow-releaser.taskTypeTweet"
