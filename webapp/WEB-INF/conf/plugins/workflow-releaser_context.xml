@@ -97,5 +97,55 @@
         p:taskForAutomaticAction="true" />
         
     <bean id="workflow-releaser.taskUpdateJiraVersions"
-        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskUpdateJiraVersions" />    
+        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskUpdateJiraVersions" />
+
+    <!-- Task Release from tag : prepare (checkout tag, modify pom, commit, tag, push tag) -->
+    <bean id="workflow-releaser.taskTypeReleaseFromTagPrepare"
+        class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
+        p:key="taskReleaseFromTagPrepare" p:titleI18nKey="module.workflow.releaser.taskReleaseFromTagPrepareTitle"
+        p:beanName="workflow-releaser.taskReleaseFromTagPrepare"
+        p:taskForAutomaticAction="true" />
+
+    <bean id="workflow-releaser.taskReleaseFromTagPrepare"
+        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskReleaseFromTagPrepare" />
+
+    <!-- Task Release from tag : deploy to Nexus -->
+    <bean id="workflow-releaser.taskTypeReleaseFromTagDeploy"
+        class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
+        p:key="taskReleaseFromTagDeploy" p:titleI18nKey="module.workflow.releaser.taskReleaseFromTagDeployTitle"
+        p:beanName="workflow-releaser.taskReleaseFromTagDeploy"
+        p:taskForAutomaticAction="true" />
+
+    <bean id="workflow-releaser.taskReleaseFromTagDeploy"
+        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskReleaseFromTagDeploy" />
+
+    <!-- Task Release from tag : update master* version -->
+    <bean id="workflow-releaser.taskTypeReleaseFromTagUpdateMaster"
+        class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
+        p:key="taskReleaseFromTagUpdateMaster" p:titleI18nKey="module.workflow.releaser.taskReleaseFromTagUpdateMasterTitle"
+        p:beanName="workflow-releaser.taskReleaseFromTagUpdateMaster"
+        p:taskForAutomaticAction="true" />
+
+    <bean id="workflow-releaser.taskReleaseFromTagUpdateMaster"
+        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskReleaseFromTagUpdateMaster" />
+
+    <!-- Task Release from tag : bump develop* snapshot -->
+    <bean id="workflow-releaser.taskTypeReleaseFromTagBumpDevelop"
+        class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
+        p:key="taskReleaseFromTagBumpDevelop" p:titleI18nKey="module.workflow.releaser.taskReleaseFromTagBumpDevelopTitle"
+        p:beanName="workflow-releaser.taskReleaseFromTagBumpDevelop"
+        p:taskForAutomaticAction="true" />
+
+    <bean id="workflow-releaser.taskReleaseFromTagBumpDevelop"
+        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskReleaseFromTagBumpDevelop" />
+
+    <!-- Task Release from tag : ours-merge develop into master -->
+    <bean id="workflow-releaser.taskTypeReleaseFromTagMarkOurs"
+        class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
+        p:key="taskReleaseFromTagMarkOurs" p:titleI18nKey="module.workflow.releaser.taskReleaseFromTagMarkOursTitle"
+        p:beanName="workflow-releaser.taskReleaseFromTagMarkOurs"
+        p:taskForAutomaticAction="true" />
+
+    <bean id="workflow-releaser.taskReleaseFromTagMarkOurs"
+        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskReleaseFromTagMarkOurs" />
 </beans>
