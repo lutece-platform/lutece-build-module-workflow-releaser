@@ -89,15 +89,15 @@
     <bean id="workflow-releaser.taskTweet"
         class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskTweet" />
         
-         <!-- Task Update Jira versions-->
-    <bean id="workflow-releaser.taskTypeUpdateJiraVersions"
+         <!-- Task Update bugtracker versions-->
+    <bean id="workflow-releaser.taskTypeUpdateBugtrackerVersions"
         class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
-        p:key="taskUpdateJiraVersions" p:titleI18nKey="module.workflow.releaser.taskUpdateJiraVersionsTitle"
-        p:beanName="workflow-releaser.taskUpdateJiraVersions"
+        p:key="taskUpdateBugtrackerVersions" p:titleI18nKey="module.workflow.releaser.taskUpdateBugtrackerVersionsTitle"
+        p:beanName="workflow-releaser.taskUpdateBugtrackerVersions"
         p:taskForAutomaticAction="true" />
-        
-    <bean id="workflow-releaser.taskUpdateJiraVersions"
-        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskUpdateJiraVersions" />
+
+    <bean id="workflow-releaser.taskUpdateBugtrackerVersions"
+        class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskUpdateBugtrackerVersions" />
 
     <!-- Task Release from tag : prepare (checkout tag, modify pom, commit, tag, push tag) -->
     <bean id="workflow-releaser.taskTypeReleaseFromTagPrepare"
