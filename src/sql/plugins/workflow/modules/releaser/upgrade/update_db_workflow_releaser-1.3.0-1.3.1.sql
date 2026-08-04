@@ -1,5 +1,5 @@
 --
--- Upgrade 1.2.1 -> 1.3.0
+-- Upgrade 1.3.0 -> 1.3.1
 --
 -- BREAKING CHANGE : the task type key 'taskUpdateJiraVersions' has been renamed to
 -- 'taskUpdateBugtrackerVersions'
