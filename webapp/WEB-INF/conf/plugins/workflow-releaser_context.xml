@@ -9,15 +9,15 @@
        http://www.springframework.org/schema/context/spring-context-3.0.xsd
        http://www.springframework.org/schema/tx
        http://www.springframework.org/schema/tx/spring-tx-3.0.xsd">
-	<!-- Task Checkout Repository(checkout svn/clone git) -->
-    <bean id="workflow-releaser.taskTypeCheckoutRepository"
+	<!-- Task Clone Repository(clone git) -->
+    <bean id="workflow-releaser.taskTypeCloneRepository"
 		class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"
-		p:key="taskCheckoutRepositoy" p:titleI18nKey="module.workflow.releaser.taskCheckoutRepositoyTitle"
-		p:beanName="workflow-releaser.taskCheckoutRepositoy"
+		p:key="taskCloneRepository" p:titleI18nKey="module.workflow.releaser.taskCloneRepositoryTitle"
+		p:beanName="workflow-releaser.taskCloneRepository"
 		p:taskForAutomaticAction="true" />
-		
-	<bean id="workflow-releaser.taskCheckoutRepositoy"
-		class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskCheckoutRepository" />
+
+	<bean id="workflow-releaser.taskCloneRepository"
+		class="fr.paris.lutece.plugins.workflow.modules.releaser.service.TaskCloneRepository" />
     <!-- Task Merge Develop Master-->
     <bean id="workflow-releaser.taskTypeMergeDevelopMaster"
         class="fr.paris.lutece.plugins.workflowcore.business.task.TaskType"

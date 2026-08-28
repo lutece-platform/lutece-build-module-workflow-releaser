@@ -15,11 +15,11 @@ import fr.paris.lutece.plugins.workflowcore.service.resource.IResourceHistorySer
 import fr.paris.lutece.plugins.workflowcore.service.task.SimpleTask;
 
 /**
- * 
- * TaskGitCloneRepository
+ *
+ * TaskCloneRepository
  *
  */
-public class TaskCheckoutRepository extends  SimpleTask {
+public class TaskCloneRepository extends  SimpleTask {
 
 	@Inject
     private IResourceHistoryService _resourceHistoryService;
@@ -34,7 +34,7 @@ public class TaskCheckoutRepository extends  SimpleTask {
     {
         ResourceHistory resourceHistory = _resourceHistoryService.findByPrimaryKey( nIdResourceHistory );
         WorkflowReleaseContext workflowReleaseContext=_workflowReleaseContextService.getWorkflowReleaseContext(resourceHistory.getIdResource());
-        _workflowReleaseContextService.checkoutRepository( workflowReleaseContext, locale );
+        _workflowReleaseContextService.cloneRepository( workflowReleaseContext, locale );
     }
 
     /**
