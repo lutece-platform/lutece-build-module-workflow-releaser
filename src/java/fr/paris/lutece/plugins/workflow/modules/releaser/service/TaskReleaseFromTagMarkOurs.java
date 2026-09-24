@@ -14,7 +14,7 @@ import fr.paris.lutece.plugins.workflowcore.service.resource.IResourceHistorySer
 import fr.paris.lutece.plugins.workflowcore.service.task.SimpleTask;
 
 /**
- * Task that delegates to IWorkflowReleaseContextService.markDevelopIntegratedInMaster.
+ * Task that delegates to IWorkflowReleaseContextService.markReleaseIntegratedInDevelop.
  */
 public class TaskReleaseFromTagMarkOurs extends SimpleTask
 {
@@ -29,7 +29,7 @@ public class TaskReleaseFromTagMarkOurs extends SimpleTask
     {
         ResourceHistory resourceHistory = _resourceHistoryService.findByPrimaryKey( nIdResourceHistory );
         WorkflowReleaseContext workflowReleaseContext = _workflowReleaseContextService.getWorkflowReleaseContext( resourceHistory.getIdResource( ) );
-        _workflowReleaseContextService.markDevelopIntegratedInMaster( workflowReleaseContext, locale );
+        _workflowReleaseContextService.markReleaseIntegratedInDevelop( workflowReleaseContext, locale );
     }
 
     @Override
